@@ -1,0 +1,95 @@
+---
+layout: default
+---
+{% assign profile = site.data.profile %}
+<main id="main">
+  <section class="hero container" id="top" aria-labelledby="name">
+    <div class="hero-main">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> {{ profile.person.eyebrow | escape }}</p>
+      <h1 id="name">{{ profile.person.name | escape }}</h1>
+      <p class="position">{{ profile.person.status | escape }} <span aria-hidden="true">/</span> {{ profile.person.field | escape }}</p>
+      <p class="hero-statement">{% for line in profile.person.headline_lines %}{{ line | escape }}{% unless forloop.last %}<br class="desktop-break"> {% endunless %}{% endfor %}</p>
+      <p class="intro">{{ profile.person.summary | escape }}</p>
+      <a class="text-link hero-link" href="#research">Explore my research interests <span aria-hidden="true">↓</span></a>
+    </div>
+    <aside class="profile" aria-label="Academic affiliation">
+      <div class="portrait-frame">
+        <img class="portrait" src="{{ profile.person.portrait | escape }}" alt="{{ profile.person.portrait_alt | escape }}" width="186" height="252" fetchpriority="high">
+        <span class="portrait-index" aria-hidden="true">{{ profile.person.portrait_label | escape }}</span>
+      </div>
+      <p class="small-label">Based at</p>
+      <p class="lab-name"><a href="{{ profile.affiliation.lab_url | escape }}">{% for line in profile.affiliation.lab_lines %}{{ line | escape }}{% unless forloop.last %}<br> {% endunless %}{% endfor %} <span aria-hidden="true">↗︎</span></a></p>
+      <p class="profile-note">{{ profile.affiliation.advisor | escape }}</p>
+      <p class="department"><a href="{{ profile.affiliation.department_url | escape }}">{% for line in profile.affiliation.department_lines %}{{ line | escape }}{% unless forloop.last %}<br> {% endunless %}{% endfor %} <span aria-hidden="true">↗︎</span></a></p>
+    </aside>
+  </section>
+
+  <section class="section container" id="research" aria-labelledby="research-heading">
+    <div class="section-label"><span class="section-number">01</span><h2 id="research-heading">Research interests</h2></div>
+    <div class="section-content">
+      <p class="section-lead">{{ profile.research.introduction | escape }}</p>
+      <div class="research-grid">
+        {% for theme in profile.research.themes %}
+        <article class="research-item">
+          <span class="research-index" aria-hidden="true">{{ theme.label | escape }}</span>
+          <h3>{% for line in theme.title_lines %}{{ line | escape }}{% unless forloop.last %}<br> {% endunless %}{% endfor %}</h3>
+          <p>{{ theme.description | escape }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="publications" aria-labelledby="publications-heading">
+    <div class="section-label"><span class="section-number">02</span><h2 id="publications-heading">Publications</h2></div>
+    <div class="section-content">
+      {% for publication in profile.publications %}
+      <article class="publication">
+        <div class="publication-top"><span class="small-label">{{ publication.type | escape }}</span><time datetime="{{ publication.year | escape }}">{{ publication.year | escape }}</time></div>
+        <h3><a href="{{ publication.url | escape }}">{{ publication.title | escape }}</a></h3>
+        <p class="authors">{% for author in publication.authors %}{% if author == profile.person.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %}{% if forloop.length == 2 %} and {% else %}, and {% endif %}{% else %}, {% endif %}{% endunless %}{% endfor %}</p>
+        <p class="venue">{{ publication.venue | escape }}</p>
+        <a class="text-link" href="{{ publication.url | escape }}">View publication <span aria-hidden="true">↗︎</span></a>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section container" id="background" aria-labelledby="background-heading">
+    <div class="section-label"><span class="section-number">03</span><h2 id="background-heading">Background</h2></div>
+    <div class="section-content">
+      <nav class="background-nav" aria-label="Background sections">
+        {% for group in profile.background %}<a href="#{{ group.id | escape }}">{{ group.navigation_label | escape }}</a>{% endfor %}
+      </nav>
+      {% for group in profile.background %}
+      <div class="background-group" id="{{ group.id | escape }}">
+        <h3 class="group-heading">{{ group.label | escape }}</h3>
+        {% for entry in group.entries %}
+        <article class="timeline-item">
+          <p class="dates">{% for period in entry.dates %}<span class="date-period">{{ period | escape }}</span>{% endfor %}</p>
+          <div>
+            <h4>{{ entry.title | escape }}</h4>
+            {% if entry.role and entry.role != "" %}<p class="role">{{ entry.role | escape }}</p>{% endif %}
+            {% for detail in entry.details %}<p>{{ detail | escape | newline_to_br }}</p>{% endfor %}
+            {% if entry.bullets and entry.bullets.size > 0 %}<ul class="role-details">{% for bullet in entry.bullets %}<li>{{ bullet | escape }}</li>{% endfor %}</ul>{% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+    <div class="container contact-inner">
+      <div class="section-label"><span class="section-number">04</span><h2 id="contact-heading">Contact</h2></div>
+      <div class="section-content">
+        <p class="contact-statement">Let’s connect.</p>
+        <a class="contact-email" href="mailto:{{ profile.contact.email | escape }}">{{ profile.contact.email | escape }} <span aria-hidden="true">↗︎</span></a>
+        <div class="contact-links">
+          {% for link in profile.contact.links %}<a href="{{ link.url | escape }}">{{ link.label | escape }} <span aria-hidden="true">↗︎</span></a>{% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

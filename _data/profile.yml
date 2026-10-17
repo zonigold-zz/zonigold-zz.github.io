@@ -1,0 +1,221 @@
+# 홈페이지 내용은 이 파일 한 곳에서 수정합니다.
+# 들여쓰기는 공백 2칸을 사용하고, 기존 항목을 복사해 추가하세요.
+# 내용은 HTML이 아닌 일반 텍스트로 작성합니다. 기간을 합치지 말고 dates에 각각 적습니다.
+# 아래 내용은 공개 홈페이지에 표시됩니다. 비공개 정보는 넣지 마세요.
+
+meta:
+  title: Zion Kim | Brain–Computer Interfaces · KAIST
+  description: Zion Kim is a Ph.D. student at KAIST studying EEG, brain–computer interfaces, neuroprosthetics,
+    and brain-health biomarkers.
+  allow_search_indexing: false
+person:
+  name: Zion Kim
+  institution: KAIST
+  status: Ph.D. Student
+  field: Brain and Cognitive Sciences
+  eyebrow: Brain–computer interfaces · KAIST
+  headline_lines:
+  - From neural signals to
+  - practical neurotechnology.
+  summary: I study how EEG can support useful, lasting brain–computer interfaces. My interests span accessible
+    neuroprosthetics, long-term neural decoding, and biomarkers of brain health.
+  portrait: assets/zion-kim.jpg
+  portrait_alt: Zion Kim
+  portrait_label: ZK / KAIST
+affiliation:
+  lab_lines:
+  - Decision Brain
+  - Dynamics Lab
+  lab_url: https://raphe.kaist.ac.kr/
+  advisor: Advised by Professor Jaeseung Jeong
+  department_lines:
+  - Department of Brain and
+  - Cognitive Sciences, KAIST
+  department_url: https://bcs.kaist.ac.kr/korean
+research:
+  introduction: Making neurotechnology more accessible, reliable, and useful in everyday life.
+  themes:
+  - label: 01 / HARDWARE
+    title_lines:
+    - Neuroprosthetics &
+    - EEG hardware
+    description: Working toward low-cost, high-performance EEG-controlled robotic prosthetic hands and
+      the EEG hardware to support them.
+  - label: 02 / PEOPLE
+    title_lines:
+    - Amputee-centered
+    - brain–computer interfaces
+    description: Exploring motor-imagery decoding and prosthetic control with the needs of people with
+      limb loss at the center.
+  - label: 03 / LONGEVITY
+    title_lines:
+    - Long-term BCI &
+    - EEG drift compensation
+    description: Investigating how to accommodate changes in EEG over time, with the goal of sustaining
+      reliable brain–computer interface use.
+  - label: 04 / BRAIN HEALTH
+    title_lines:
+    - Brain aging &
+    - neural biomarkers
+    description: Interested in brain-health biomarkers for early dementia detection and research into
+      approaches that may help delay its onset.
+publications:
+- type: Conference paper
+  year: '2025'
+  title: Decoding EEG-Based Motor Imagery of Hand Grasp Types for an Amputee Due to Birth Trauma
+  authors:
+  - Seong-Ho Ahn
+  - Zion Kim
+  - Jun Ha Jung
+  - Hyeon-Jun Lee
+  - Heejin Kim
+  - Jungu Cho
+  - Jaeseung Jeong
+  venue: 2025 13th International Conference on Brain-Computer Interface (BCI), pp. 1–5. IEEE.
+  url: https://doi.org/10.1109/BCI65088.2025.10931531
+background:
+- id: education
+  label: Education
+  navigation_label: Education
+  entries:
+  - dates:
+    - Feb 2025 — Present
+    title: KAIST
+    role: Integrated M.S.–Ph.D. Program
+    details:
+    - Department of Brain and Cognitive Sciences
+    bullets: []
+  - dates:
+    - Feb 2019 — Feb 2025
+    title: KAIST
+    role: B.S., Double Major
+    details:
+    - |-
+      Mechanical Engineering
+      Bio and Brain Engineering
+    bullets: []
+  - dates:
+    - Feb 2016 — Feb 2019
+    title: GyeonggiBuk Science High School
+    role: ''
+    details:
+    - Research & Education group in Physics
+    bullets: []
+- id: experience
+  label: Research & industry experience
+  navigation_label: Research & industry
+  entries:
+  - dates:
+    - Mar 2024 — Feb 2025
+    title: Decision Brain Dynamics Lab
+    role: Undergraduate Lab Intern · Full-time
+    details:
+    - KAIST Department of Brain and Cognitive Sciences
+    bullets: []
+  - dates:
+    - Apr–Jun 2023
+    - Sep 2023–Feb 2024
+    title: Decision Brain Dynamics Lab
+    role: Lab Intern · Part-time
+    details:
+    - KAIST Department of Brain and Cognitive Sciences
+    - Participated in commissioned research projects.
+    bullets: []
+  - dates:
+    - Jan–Feb 2023
+    - Jul–Aug 2023
+    title: CJ AI Center
+    role: Academic Intern · Group Leader · Full-time
+    details:
+    - AI R&D Division, CJ Olive Networks, CJ Group
+    - Academic internship under the KAIST BCS–CJ AI Center MOU.
+    bullets:
+    - EEG-controlled prosthetic-hand development
+    - EEG-processing AI model development
+- id: teaching
+  label: Teaching
+  navigation_label: Teaching
+  entries:
+  - dates:
+    - Mar 2022–Aug 2023
+    - Sep 2024–Feb 2025
+    title: CS101 · Introduction to Programming (Python)
+    role: Teaching Assistant · KAIST · Part-time
+    details:
+    - Teaching Assistant in Charge, Sep 2022–Feb 2023.
+    bullets: []
+  - dates:
+    - Mar 2023 — Apr 2024
+    title: SchoolPlanet
+    role: College Science Tutor · Part-time
+    details:
+    - General Biology and General Chemistry
+    - School Planet & Education, Sinsa-dong
+    bullets: []
+  - dates:
+    - Jul 2019 — Dec 2023
+    title: Brain Valley Academy
+    role: Class Assistant (TA) · Part-time
+    details:
+    - Biology class for science and gifted high schools, taught by Yoo Ho-Jin.
+    - Daechi-dong
+    bullets: []
+  - dates:
+    - Aug 2019 — Aug 2022
+    title: Sidae-Injae Academy
+    role: Class Assistant (TA) · Part-time
+    details:
+    - Biology Essay Class, taught by Yoo Ho-Jin.
+    - Daechi-dong
+    bullets: []
+  - dates:
+    - Sep 2021 — Dec 2021
+    title: Banpo Academy
+    role: High School Mathematics Tutor · Part-time
+    details:
+    - Calculus · Banpo-dong
+    bullets: []
+- id: outreach
+  label: Mentoring & outreach
+  navigation_label: Mentoring & outreach
+  entries:
+  - dates:
+    - Jul 2024 — Aug 2024
+    title: Andersen Co.
+    role: Science Tutor & Group 1 Instructor · Part-time
+    details:
+    - Korean Youth Europe Science Camp, Aug 1–14, 2024.
+    - Also served as an English simultaneous interpreter.
+    bullets: []
+  - dates:
+    - Oct 2022 — Jun 2023
+    title: AFE · All For Edu
+    role: Science Exploration Activity Instructor / Mentor · Part-time
+    details:
+    - Science exploration activities for elementary and middle school students.
+    bullets: []
+  - dates:
+    - Sep 2021 — Jun 2022
+    title: KAIST Science Outreach Program (KSOP)
+    role: Science Exploration Activity Instructor / Mentor · Part-time
+    details:
+    - Science exploration activities for middle and high school students.
+    bullets: []
+- id: leadership
+  label: Leadership
+  navigation_label: Leadership
+  entries:
+  - dates:
+    - Mar 2019 — Feb 2025
+    title: KAIST Basketball Team TU
+    role: Team Member
+    details:
+    - President, 2020–2021.
+    bullets: []
+contact:
+  email: zonigold@kaist.ac.kr
+  links:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/zion-kim-984b7b343/
+  - label: Lab website
+    url: https://raphe.kaist.ac.kr/

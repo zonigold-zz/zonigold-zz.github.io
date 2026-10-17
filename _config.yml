@@ -1,0 +1,11 @@
+# GitHub Pages 기본 Jekyll 빌드를 사용합니다.
+# 평소 내용 수정은 _data/profile.yml에서 합니다.
+title: Zion Kim
+encoding: UTF-8
+baseurl: ""
+plugins: []
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

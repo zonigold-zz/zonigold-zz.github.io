@@ -1,0 +1,29 @@
+{% assign profile = site.data.profile %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173e3b">
+  <meta name="description" content="{{ profile.meta.description | escape }}">
+  {% unless profile.meta.allow_search_indexing %}<meta name="robots" content="noindex, nofollow">{% endunless %}
+  <title>{{ profile.meta.title | escape }}</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#top" aria-label="{{ profile.person.name | escape }}, back to top">{{ profile.person.name | escape }}<span aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact <span aria-hidden="true">↗︎</span></a>
+      </nav>
+    </div>
+  </header>
+  {{ content }}
+  <footer class="site-footer container"><p>{{ profile.person.name | escape }} <span aria-hidden="true">·</span> {{ profile.person.institution | escape }}</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
