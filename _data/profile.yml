@@ -5,13 +5,13 @@
 
 meta:
   title: Zion Kim | Brain–Computer Interfaces · KAIST
-  description: Zion Kim is a Ph.D. student at KAIST studying EEG, brain–computer interfaces, neuroprosthetics,
+  description: Zion Kim is enrolled in the Ph.D. Course at KAIST studying EEG, brain–computer interfaces, neuroprosthetics,
     and brain-health biomarkers.
   allow_search_indexing: false
 person:
   name: Zion Kim
   institution: KAIST
-  status: Ph.D. Student
+  status: Ph.D. Course
   field: Brain and Cognitive Sciences
   eyebrow: Brain–computer interfaces · KAIST
   headline_lines:
@@ -81,7 +81,7 @@ background:
   - dates:
     - Feb 2025 — Present
     title: KAIST
-    role: Integrated M.S.–Ph.D. Program
+    role: Ph.D. Course (Integrated M.S.–Ph.D. Program)
     details:
     - Department of Brain and Cognitive Sciences
     bullets: []
