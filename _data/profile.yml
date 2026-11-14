@@ -212,6 +212,16 @@ background:
     details:
     - President, 2020–2021.
     bullets: []
+- id: academic-service
+  label: Academic Service / Peer Review
+  navigation_label: Academic Service / Peer Review
+  entries:
+  - dates:
+    - '2026'
+    title: 9th International Conference on Biological Information and Biomedical Engineering (BIBE 2026)
+    role: Reviewer
+    details: []
+    bullets: []
 contact:
   email: zonigold@kaist.ac.kr
   links:
