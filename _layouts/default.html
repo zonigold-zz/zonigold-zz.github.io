@@ -1,29 +1,40 @@
 {% assign profile = site.data.profile %}<!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173e3b">
+  <meta name="theme-color" content="#171916">
   <meta name="description" content="{{ profile.meta.description | escape }}">
   {% unless profile.meta.allow_search_indexing %}<meta name="robots" content="noindex, nofollow">{% endunless %}
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ profile.meta.title | escape }}">
+  <meta property="og:description" content="{{ profile.meta.description | escape }}">
+  <meta property="og:image" content="https://zonigold-zz.github.io/{{ profile.person.portrait | escape }}">
   <title>{{ profile.meta.title | escape }}</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="wordmark" href="#top" aria-label="{{ profile.person.name | escape }}, back to top">{{ profile.person.name | escape }}<span aria-hidden="true">.</span></a>
-      <nav aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="{{ profile.person.name | escape }}, back to top"><span class="brand-symbol" aria-hidden="true">z<span>k</span></span><span>{{ profile.person.name | escape }}<small>RESEARCH & EXPLORATION</small></span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#background">Background</a>
-        <a href="#contact">Contact <span aria-hidden="true">↗︎</span></a>
+        <a href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
+      <div class="header-tools">
+        <button class="theme-toggle icon-button js-only" type="button" aria-label="Switch to light theme" title="Switch theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></button>
+        <button class="menu-toggle js-only" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">＋</span></button>
+      </div>
     </div>
   </header>
   {{ content }}
-  <footer class="site-footer container"><p>{{ profile.person.name | escape }} <span aria-hidden="true">·</span> {{ profile.person.institution | escape }}</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <footer class="site-footer container"><a class="footer-name" href="#top">{{ profile.person.name | escape }}<span aria-hidden="true">.</span></a><p>Brain & Cognitive Sciences · {{ profile.person.institution | escape }}</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <div class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

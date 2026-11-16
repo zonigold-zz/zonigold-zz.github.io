@@ -1,35 +1,39 @@
-# Zion Kim — 개인 홈페이지
+# Zion Kim — Signal / Possibility
 
-GitHub Pages의 기본 Jekyll 빌드로 동작합니다. 별도 API 키, Notion 연동, 유료 서비스는 필요하지 않습니다.
+KAIST 연구자 Zion Kim의 개인 홈페이지. GitHub Pages 기본 Jekyll 빌드를 그대로 사용하며 외부 폰트, 패키지 설치, API 키가 필요하지 않습니다.
 
-## 평소 내용 수정
-1. GitHub 저장소에서 `_data/profile.yml`을 엽니다.
-2. 연필(Edit) 버튼을 누릅니다.
-3. 원하는 내용만 수정하고 **Commit changes**로 저장합니다.
-4. Pages 배포가 성공한 뒤 홈페이지를 새로고침합니다. 반영에는 몇 분이 걸릴 수 있습니다.
+## 내용 수정
 
-주요 항목:
-- `person`: 이름, 과정, 소개와 사진 경로
-- `research`: 연구 관심사
-- `publications`: 논문 목록
-- `background`: 학력, 연구·산업 경력, 교육, 멘토링, 리더십
-- `contact`: 공개 이메일과 링크
+공개 프로필 정보는 `_data/profile.yml` 한 곳에서 관리합니다. 기존 학력, 경력, 논문, 이메일, 사진과 검색 노출 설정을 유지했습니다.
 
-경력이나 논문을 추가하려면 같은 종류의 기존 항목을 복사하고 내용과 날짜를 바꾸세요. 공백 들여쓰기를 유지하고 탭은 쓰지 마세요. `dates`의 여러 기간은 별도 항목으로 유지하세요. 문장에 콜론이 있으면 따옴표로 감싸는 것이 안전합니다. 모든 내용은 공개됩니다.
+- `person`: 이름, 과정, 소개, 사진
+- `affiliation`: 연구실, 지도교수, 소속
+- `research.themes`: 펼쳐 볼 수 있는 연구 관심사
+- `publications`: 논문과 인용 복사에 사용하는 서지 정보
+- `background`: 학력, 연구·산업 경력, 교육, 멘토링, 리더십, 학술 활동
+- `contact`: 공개 이메일과 외부 링크
 
-## 사진과 디자인
-- 사진: `assets/zion-kim.jpg`를 교체하거나 `person.portrait` 경로를 수정합니다.
-- 색상·간격·글꼴: `styles.css`
-- 페이지 구조: `index.html`, `_layouts/default.html`
-- 검색 노출: `_data/profile.yml`의 `meta.allow_search_indexing`을 `true`로 변경합니다. 현재는 검토용으로 `false`입니다. 이는 접근 제한이나 비공개 설정이 아닙니다.
+항목을 추가할 때는 기존 항목을 복사하고 공백 2칸 들여쓰기를 유지하세요. `dates`의 여러 활동 기간은 각각 별도 항목으로 작성합니다. 리더십 항목은 ‘Beyond the lab’에도 표시됩니다. 공개할 수 있는 정보만 적어 주세요.
 
-## 최초 배포
-1. `zonigold-zz.github.io`라는 공개 저장소를 만들고 이 폴더의 파일을 최상위에 업로드합니다. `_data`, `_layouts`, `assets` 폴더도 포함합니다.
-2. Settings → Pages → Build and deployment에서 **Deploy from a branch**, **main**, **/(root)**를 선택하고 저장합니다.
-3. Actions에서 Pages 빌드 성공을 확인합니다.
-4. GitHub가 표시하는 사이트 주소를 열어 내용·사진·링크를 확인합니다.
+## 디자인과 기능
 
-`.nojekyll` 파일을 추가하면 템플릿 처리가 꺼지므로 추가하지 마세요. 이 소스의 `index.html`을 직접 더블클릭하면 완성 페이지가 아닌 템플릿이 표시됩니다. 별도 정적 미리보기 ZIP을 사용하세요.
+- `index.html`: 소개, 연구, 논문, 경력, 연구실 밖의 모습, 연락처
+- `_layouts/default.html`: 내비게이션과 공통 메타 정보
+- `styles.css`: 화면 크기별 디자인, 다크/라이트 테마, 인쇄 레이아웃
+- `assets/site.js`: 테마 저장, 모바일 메뉴, 인용 복사, 경력 링크 펼치기, 인쇄
+- `assets/neural-field.svg`: 실제 측정 EEG가 아닌 수학적 개념 일러스트
+- `assets/zion-kim.jpg`: 기존 공개 프로필 사진
 
-## 오류와 되돌리기
-배포가 실패하면 Actions 로그에서 YAML 들여쓰기·따옴표 오류를 확인합니다. 변경 이력은 GitHub에 남으므로 이전 내용을 복구할 수 있습니다. 비밀번호나 API 키를 저장소에 넣지 마세요.
+상단의 원형 버튼으로 테마를 전환합니다. 연구 주제와 경력은 클릭 또는 키보드 Enter/Space로 펼칩니다. 논문의 Copy citation 버튼은 일반 텍스트 인용을 복사하며 복사가 제한된 환경에서는 선택 가능한 인용문을 표시합니다. Print / save profile as PDF는 브라우저 인쇄 창을 열고 모든 연구와 경력을 포함합니다. 별도의 공식 CV 파일을 다운로드하는 기능은 아닙니다.
+
+자바스크립트를 사용하지 않아도 본문, 링크, 펼침 항목을 볼 수 있습니다. 움직임 최소화 설정을 존중하며 폰트·분석 도구·방문자 추적 서비스를 외부에서 불러오지 않습니다.
+
+## 미리보기와 반영
+
+`zion-profile-preview` 폴더의 `index.html`은 완성된 정적 미리보기입니다. 같은 폴더의 `styles.css`와 `assets`도 함께 유지하세요. 테마와 펼침 기능은 파일을 직접 열어도 동작하고 인용 복사는 브라우저 제한에 따라 선택 방식으로 대체됩니다.
+
+운영 저장소에는 이 `zion-profile-source` 폴더의 내용만 반영합니다. `_data`, `_layouts`, `assets`를 포함하며 기존 같은 이름의 파일은 교체합니다. `index.html`은 Jekyll 템플릿이므로 소스 파일을 직접 열면 완성된 화면이 표시되지 않습니다.
+
+기존 Settings → Pages → Deploy from a branch → main → /(root) 설정을 유지하세요. `.nojekyll` 파일을 추가하지 마세요. 배포 후 GitHub Actions의 Jekyll 빌드와 Pages 반영을 확인합니다.
+
+현재 `meta.allow_search_indexing: false` 설정을 유지하여 검색 수집을 요청하지 않습니다. 이는 사이트 접근을 제한하거나 비공개로 만드는 설정은 아닙니다.
