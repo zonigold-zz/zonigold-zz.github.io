@@ -17,11 +17,12 @@ person:
   headline_lines:
   - From neural signals to
   - practical neurotechnology.
-  summary: I study how EEG can support useful, lasting brain–computer interfaces. My interests span accessible
-    neuroprosthetics, long-term neural decoding, and biomarkers of brain health.
+  summary: I study how EEG can support useful, lasting brain–computer interfaces. My interests span accessible neuroprosthetics,
+    long-term neural decoding, and biomarkers of brain health.
   portrait: assets/zion-kim.jpg
   portrait_alt: Zion Kim
   portrait_label: ZK / KAIST
+  name_ko: 김지온
 affiliation:
   lab_lines:
   - Decision Brain
@@ -39,26 +40,26 @@ research:
     title_lines:
     - Neuroprosthetics &
     - EEG hardware
-    description: Working toward low-cost, high-performance EEG-controlled robotic prosthetic hands and
-      the EEG hardware to support them.
+    description: Working toward low-cost, high-performance EEG-controlled robotic prosthetic hands and the EEG hardware
+      to support them.
   - label: 02 / PEOPLE
     title_lines:
     - Amputee-centered
     - brain–computer interfaces
-    description: Exploring motor-imagery decoding and prosthetic control with the needs of people with
-      limb loss at the center.
+    description: Exploring motor-imagery decoding and prosthetic control with the needs of people with limb loss
+      at the center.
   - label: 03 / LONGEVITY
     title_lines:
     - Long-term BCI &
     - EEG drift compensation
-    description: Investigating how to accommodate changes in EEG over time, with the goal of sustaining
-      reliable brain–computer interface use.
+    description: Investigating how to accommodate changes in EEG over time, with the goal of sustaining reliable
+      brain–computer interface use.
   - label: 04 / BRAIN HEALTH
     title_lines:
     - Brain aging &
     - neural biomarkers
-    description: Interested in brain-health biomarkers for early dementia detection and research into
-      approaches that may help delay its onset.
+    description: Interested in brain-health biomarkers for early dementia detection and research into approaches
+      that may help delay its onset.
 publications:
 - type: Conference paper
   year: '2025'
@@ -73,6 +74,22 @@ publications:
   - Jaeseung Jeong
   venue: 2025 13th International Conference on Brain-Computer Interface (BCI), pp. 1–5. IEEE.
   url: https://doi.org/10.1109/BCI65088.2025.10931531
+- type: Domestic conference paper
+  year: '2025'
+  title: Auditory-Visual Effects on Word Retrieval Task and their Relation to Auditory Factors in Adults with Cochlear
+    Implants
+  title_ko: 인공와우 사용 성인의 단어회상과제에서 시각․청각 조건 비교 및 임상적 청각요인 분석
+  authors:
+  - 김지성
+  - 김지온
+  - 신중한
+  - 성지은
+  venue: 2025 한국언어치료학회-한국언어청각임상학회 공동학술대회 발표논문집, pp. 311-313.
+  url: https://ksha1990.or.kr/homepage/boardMedia/214792#page=311
+  link_label: View proceedings
+  date: '2025-11-08'
+  pages: 311-313
+  source_url: https://ksha1990.or.kr/board/conf/article/277857
 background:
 - id: education
   label: Education
@@ -90,9 +107,9 @@ background:
     title: KAIST
     role: B.S., Double Major
     details:
-    - |-
-      Mechanical Engineering
-      Bio and Brain Engineering
+    - 'Mechanical Engineering
+
+      Bio and Brain Engineering'
     bullets: []
   - dates:
     - Feb 2016 — Feb 2019
@@ -225,9 +242,14 @@ background:
 contact:
   email: zonigold@kaist.ac.kr
   links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=Ye0M9fIAAAAJ&hl=en
   - label: LinkedIn
     url: https://www.linkedin.com/in/zion-kim-984b7b343/
   - label: GitHub
     url: https://github.com/zonigold-zz
   - label: Lab website
     url: https://raphe.kaist.ac.kr/
+  cv:
+    path: assets/Zion-Kim-CV.pdf
+    updated: '2026-11-16'

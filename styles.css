@@ -462,3 +462,9 @@ summary:hover h3 { color: var(--accent); }
   .contact-links { gap: 18px; margin: 0; }
   .contact-links a { font-size: 8pt; min-height: 0; }
 }
+
+/* Downloadable CV and bilingual conference titles. */
+.paper-original-title { margin-top: 14px; color: #555f4d; font-size: 14px; line-height: 1.8; word-break: keep-all; overflow-wrap: anywhere; }
+.background-downloads { display: flex; flex-wrap: wrap; gap: 8px 23px; align-items: center; }
+.background-downloads .print-profile { font-weight: 400; color: var(--muted); }
+@media print { .nav-cv, .cv-download { display: none !important; } .paper-original-title { font-size: 9pt; margin-top: 8px; } }

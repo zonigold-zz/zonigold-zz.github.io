@@ -24,7 +24,7 @@ KAIST 연구자 Zion Kim의 개인 홈페이지. GitHub Pages 기본 Jekyll 빌�
 - `assets/neural-field.svg`: 실제 측정 EEG가 아닌 수학적 개념 일러스트
 - `assets/zion-kim.jpg`: 기존 공개 프로필 사진
 
-상단의 원형 버튼으로 테마를 전환합니다. 연구 주제와 경력은 클릭 또는 키보드 Enter/Space로 펼칩니다. 논문의 Copy citation 버튼은 일반 텍스트 인용을 복사하며 복사가 제한된 환경에서는 선택 가능한 인용문을 표시합니다. Print / save profile as PDF는 브라우저 인쇄 창을 열고 모든 연구와 경력을 포함합니다. 별도의 공식 CV 파일을 다운로드하는 기능은 아닙니다.
+상단의 원형 버튼으로 테마를 전환합니다. 연구 주제와 경력은 클릭 또는 키보드 Enter/Space로 펼칩니다. 논문의 Copy citation 버튼은 일반 텍스트 인용을 복사하며 복사가 제한된 환경에서는 선택 가능한 인용문을 표시합니다. Download CV는 현재 홈페이지 정보로 작성한 실제 2쪽 PDF를 내려받습니다. Print this page는 별도로 홈페이지 인쇄 창을 엽니다.
 
 자바스크립트를 사용하지 않아도 본문, 링크, 펼침 항목을 볼 수 있습니다. 움직임 최소화 설정을 존중하며 폰트·분석 도구·방문자 추적 서비스를 외부에서 불러오지 않습니다.
 
@@ -37,3 +37,11 @@ KAIST 연구자 Zion Kim의 개인 홈페이지. GitHub Pages 기본 Jekyll 빌�
 기존 Settings → Pages → Deploy from a branch → main → /(root) 설정을 유지하세요. `.nojekyll` 파일을 추가하지 마세요. 배포 후 GitHub Actions의 Jekyll 빌드와 Pages 반영을 확인합니다.
 
 현재 `meta.allow_search_indexing: false` 설정을 유지하여 검색 수집을 요청하지 않습니다. 이는 사이트 접근을 제한하거나 비공개로 만드는 설정은 아닙니다.
+
+## CV와 학술 링크
+
+상단 메뉴, 첫 화면, Background에서 CV PDF를 다운로드할 수 있습니다. 파일은 assets/Zion-Kim-CV.pdf이며 2026-11-16 기준으로 생성되었습니다. 프로필 정보를 변경하면 PDF도 새로 생성하여 교체하세요. 인쇄 버튼과 다운로드 버튼은 별도 기능입니다.
+
+Google Scholar는 KAIST 뇌인지과학과 소속과 기존 EEG 논문을 대조하여 확인한 본인 프로필(Ye0M9fIAAAAJ)로 연결됩니다.
+
+2025 공동학술대회 논문은 학회 공식 자료집의 311-313쪽에서 제목, 저자 순서, KAIST 소속을 확인했습니다. 국문 제목과 원문에 기재된 영문 제목을 함께 표시하며, 학술대회 논문으로 구분합니다. 전체 발표논문집은 학회 원문으로 연결하고 저장소에 복제하지 않습니다.
